@@ -1,0 +1,5 @@
+/etc/init.d/diamond
+/etc/init/diamond.conf
+/etc/diamond/diamond.conf.example
+/etc/diamond/diamond.conf.example.windows
+/etc/default/diamond

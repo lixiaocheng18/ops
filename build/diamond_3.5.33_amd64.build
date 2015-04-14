@@ -1,0 +1,484 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -v3.5.33
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: source package diamond
+dpkg-buildpackage: source version 3.5.33
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by root <root@morpx-desk1>
+ dpkg-source --before-build diamond-3.5.33
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+pyversions: missing X(S)-Python-Version in control file, fall back to debian/pyversions
+test -x debian/rules
+dh_clean 
+cd . && \
+		python setup.py clean \
+		-a
+/usr/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'install_requires'
+  warnings.warn(msg)
+running clean
+'build/lib.linux-x86_64-2.7' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+rm -rf debian/python-module-stampdir
+find "/opt/git_home/Diamond/build/diamond-3.5.33" -name '*.py[co]' -delete
+find "/opt/git_home/Diamond/build/diamond-3.5.33" -name __pycache__ -type d -empty -delete
+find "/opt/git_home/Diamond/build/diamond-3.5.33" -prune -name '*.egg-info' -exec rm -rf '{}' ';'
+rm -rf build build-stamp configure-stamp build/ MANIFEST
+dh_clean
+ dpkg-source -b diamond-3.5.33
+dpkg-source: warning: no source format specified in debian/source/format, see dpkg-source(1)
+dpkg-source: info: using source format `1.0'
+dpkg-source: info: building diamond in diamond_3.5.33.tar.gz
+dpkg-source: info: building diamond in diamond_3.5.33.dsc
+ debian/rules build
+pyversions: missing X(S)-Python-Version in control file, fall back to debian/pyversions
+test -x debian/rules
+mkdir -p "."
+mkdir -p debian/python-module-stampdir
+cd . && \
+		python setup.py build \
+		--build-base="/opt/git_home/Diamond/build/diamond-3.5.33/./build"
+/usr/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'install_requires'
+  warnings.warn(msg)
+running build
+running build_py
+creating /opt/git_home/Diamond/build/diamond-3.5.33/build
+creating /opt/git_home/Diamond/build/diamond-3.5.33/build/lib.linux-x86_64-2.7
+creating /opt/git_home/Diamond/build/diamond-3.5.33/build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/collector.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/gmetric.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/__init__.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/scheduler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/error.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/convertor.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/util.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/version.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/server.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+copying src/diamond/metric.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond
+creating /opt/git_home/Diamond/build/diamond-3.5.33/build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/statsite.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/hostedgraphite.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/null.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/stats_d.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/httpHandler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/libratohandler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/cloudwatch.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/archive.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/g_metric.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/riemann.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/__init__.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/multigraphite.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/sentry.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/mysql.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/rrdtool.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/datadog.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/multigraphitepickle.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/logentries_diamond.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/rabbitmq_topic.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/zmq_pubsub.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/mqtt.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/Handler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/influxdbHandler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/tsdb.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/graphitepickle.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/rabbitmq_pubsub.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+copying src/diamond/handler/graphite.py -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/lib.linux-x86_64-2.7/diamond/handler
+running build_scripts
+creating /opt/git_home/Diamond/build/diamond-3.5.33/build/scripts-2.7
+copying and adjusting bin/diamond -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/scripts-2.7
+copying and adjusting bin/diamond-setup -> /opt/git_home/Diamond/build/diamond-3.5.33/./build/scripts-2.7
+changing mode of /opt/git_home/Diamond/build/diamond-3.5.33/./build/scripts-2.7/diamond from 644 to 755
+changing mode of /opt/git_home/Diamond/build/diamond-3.5.33/./build/scripts-2.7/diamond-setup from 644 to 755
+touch debian/python-module-stampdir/diamond
+ fakeroot debian/rules binary
+pyversions: missing X(S)-Python-Version in control file, fall back to debian/pyversions
+test -x debian/rules
+dh_testroot
+dh_prep 
+dh_installdirs -A 
+mkdir -p "."
+mkdir -p debian/python-module-stampdir
+cd . && \
+		python setup.py build \
+		--build-base="/opt/git_home/Diamond/build/diamond-3.5.33/./build"
+/usr/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'install_requires'
+  warnings.warn(msg)
+running build
+running build_py
+running build_scripts
+touch debian/python-module-stampdir/diamond
+Adding cdbs dependencies to debian/diamond.substvars
+dh_installdirs -pdiamond 
+cd . && \
+		python setup.py install \
+		--root="/opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/" \
+		--install-purelib=/usr/lib/python2.7/site-packages/ \
+		--prefix=/usr --no-compile -O0 
+/usr/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'install_requires'
+  warnings.warn(msg)
+running install
+running build
+running build_py
+running build_scripts
+running install_lib
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/collector.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/gmetric.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/__init__.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/scheduler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/error.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/convertor.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/statsite.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/hostedgraphite.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/null.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/stats_d.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/httpHandler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/libratohandler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/cloudwatch.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/archive.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/g_metric.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/riemann.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/__init__.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/multigraphite.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/sentry.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/mysql.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/rrdtool.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/datadog.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/multigraphitepickle.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/logentries_diamond.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/rabbitmq_topic.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/zmq_pubsub.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/mqtt.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/Handler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/influxdbHandler.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/tsdb.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/graphitepickle.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/rabbitmq_pubsub.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/handler/graphite.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond/handler
+copying build/lib.linux-x86_64-2.7/diamond/util.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/version.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/server.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+copying build/lib.linux-x86_64-2.7/diamond/metric.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond
+running install_scripts
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/bin
+copying build/scripts-2.7/diamond-setup -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/bin
+copying build/scripts-2.7/diamond -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/bin
+changing mode of /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/bin/diamond-setup to 755
+changing mode of /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/bin/diamond to 755
+running install_data
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond
+copying LICENSE -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond
+copying README.md -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond
+copying version.txt -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/user_scripts
+copying conf/diamond.conf.example -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/etc/diamond
+copying conf/diamond.conf.example.windows -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/etc/diamond
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/etc/diamond/handlers
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/etc/init
+copying debian/upstart/diamond.conf -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/etc/init
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ping
+copying src/collectors/ping/ping.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ping
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/cpu
+copying src/collectors/cpu/cpu.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/cpu
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/hadoop
+copying src/collectors/hadoop/hadoop.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/hadoop
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memory
+copying src/collectors/memory/memory.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memory
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/libvirtkvm
+copying src/collectors/libvirtkvm/libvirtkvm.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/libvirtkvm
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/dropwizard
+copying src/collectors/dropwizard/dropwizard.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/dropwizard
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ipmisensor
+copying src/collectors/ipmisensor/ipmisensor.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ipmisensor
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/passenger_stats
+copying src/collectors/passenger_stats/passenger_stats.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/passenger_stats
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memory_cgroup
+copying src/collectors/memory_cgroup/memory_cgroup.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memory_cgroup
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/filestat
+copying src/collectors/filestat/filestat.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/filestat
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/openstackswiftrecon
+copying src/collectors/openstackswiftrecon/openstackswiftrecon.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/openstackswiftrecon
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/vmsfs
+copying src/collectors/vmsfs/vmsfs.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/vmsfs
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/elb
+copying src/collectors/elb/elb.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/elb
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/slabinfo
+copying src/collectors/slabinfo/slabinfo.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/slabinfo
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/users
+copying src/collectors/users/users.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/users
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/amavis
+copying src/collectors/amavis/amavis.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/amavis
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/mongodb
+copying src/collectors/mongodb/mongodb.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/mongodb
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/servertechpdu
+copying src/collectors/servertechpdu/servertechpdu.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/servertechpdu
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/network
+copying src/collectors/network/network.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/network
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/lmsensors
+copying src/collectors/lmsensors/lmsensors.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/lmsensors
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/solr
+copying src/collectors/solr/solr.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/solr
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/darner
+copying src/collectors/darner/darner.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/darner
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/redisstat
+copying src/collectors/redisstat/redisstat.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/redisstat
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/processresources
+copying src/collectors/processresources/processresources.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/processresources
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/beanstalkd
+copying src/collectors/beanstalkd/beanstalkd.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/beanstalkd
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/zookeeper
+copying src/collectors/zookeeper/zookeeper.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/zookeeper
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/httpjson
+copying src/collectors/httpjson/httpjson.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/httpjson
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/bind
+copying src/collectors/bind/bind.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/bind
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/varnish
+copying src/collectors/varnish/varnish.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/varnish
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/resqueweb
+copying src/collectors/resqueweb/resqueweb.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/resqueweb
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/rabbitmq
+copying src/collectors/rabbitmq/rabbitmq.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/rabbitmq
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/smart
+copying src/collectors/smart/smart.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/smart
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/openvpn
+copying src/collectors/openvpn/openvpn.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/openvpn
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/http
+copying src/collectors/http/http.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/http
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/dseopscenter
+copying src/collectors/dseopscenter/dseopscenter.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/dseopscenter
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/loadavg
+copying src/collectors/loadavg/loadavg.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/loadavg
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/openldap
+copying src/collectors/openldap/openldap.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/openldap
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ups
+copying src/collectors/ups/ups.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ups
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/jbossapi
+copying src/collectors/jbossapi/jbossapi.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/jbossapi
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/jcollectd
+copying src/collectors/jcollectd/collectd_network.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/jcollectd
+copying src/collectors/jcollectd/jcollectd.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/jcollectd
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ceph
+copying src/collectors/ceph/ceph.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ceph
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/flume
+copying src/collectors/flume/flume.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/flume
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memcached
+copying src/collectors/memcached/memcached.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memcached
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/kvm
+copying src/collectors/kvm/kvm.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/kvm
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/puppetdb
+copying src/collectors/puppetdb/puppetdb.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/puppetdb
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/vmstat
+copying src/collectors/vmstat/vmstat.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/vmstat
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/snmpinterface
+copying src/collectors/snmpinterface/snmpinterface.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/snmpinterface
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/postqueue
+copying src/collectors/postqueue/postqueue.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/postqueue
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/iodrivesnmp
+copying src/collectors/iodrivesnmp/iodrivesnmp.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/iodrivesnmp
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/gridengine
+copying src/collectors/gridengine/gridengine.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/gridengine
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/puppetdashboard
+copying src/collectors/puppetdashboard/puppetdashboard.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/puppetdashboard
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memory_lxc
+copying src/collectors/memory_lxc/memory_lxc.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memory_lxc
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/diskspace
+copying src/collectors/diskspace/diskspace.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/diskspace
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/s3
+copying src/collectors/s3/s3.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/s3
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/snmpraw
+copying src/collectors/snmpraw/snmpraw.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/snmpraw
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/squid
+copying src/collectors/squid/squid.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/squid
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/sqs
+copying src/collectors/sqs/sqs.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/sqs
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ipvs
+copying src/collectors/ipvs/ipvs.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ipvs
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/mountstats
+copying src/collectors/mountstats/mountstats.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/mountstats
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ip
+copying src/collectors/ip/ip.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ip
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/supervisord
+copying src/collectors/supervisord/supervisord.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/supervisord
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/postgres
+copying src/collectors/postgres/postgres.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/postgres
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ossec
+copying src/collectors/ossec/ossec.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ossec
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nfs
+copying src/collectors/nfs/nfs.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nfs
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/example
+copying src/collectors/example/example.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/example
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/userscripts
+copying src/collectors/userscripts/userscripts.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/userscripts
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/tokumx
+copying src/collectors/tokumx/tokumx.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/tokumx
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ksm
+copying src/collectors/ksm/ksm.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ksm
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/unbound
+copying src/collectors/unbound/unbound.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/unbound
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nfsd
+copying src/collectors/nfsd/nfsd.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nfsd
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/cephstats
+copying src/collectors/cephstats/cephstats.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/cephstats
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ntpd
+copying src/collectors/ntpd/ntpd.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/ntpd
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nagiosperfdata
+copying src/collectors/nagiosperfdata/nagiosperfdata.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nagiosperfdata
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/uptime
+copying src/collectors/uptime/uptime.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/uptime
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nginx
+copying src/collectors/nginx/nginx.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nginx
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/files
+copying src/collectors/files/files.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/files
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/puppetagent
+copying src/collectors/puppetagent/puppetagent.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/puppetagent
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/xen_collector
+copying src/collectors/xen_collector/xen_collector.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/xen_collector
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/cpuacct_cgroup
+copying src/collectors/cpuacct_cgroup/cpuacct_cgroup.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/cpuacct_cgroup
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/sidekiqweb
+copying src/collectors/sidekiqweb/sidekiqweb.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/sidekiqweb
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/apcupsd
+copying src/collectors/apcupsd/apcupsd.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/apcupsd
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/chronyd
+copying src/collectors/chronyd/chronyd.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/chronyd
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/monit
+copying src/collectors/monit/monit.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/monit
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/powerdns
+copying src/collectors/powerdns/powerdns.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/powerdns
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nagios
+copying src/collectors/nagios/nagios.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/nagios
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/snmp
+copying src/collectors/snmp/snmp.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/snmp
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/postfix
+copying src/collectors/postfix/postfix.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/postfix
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/numa
+copying src/collectors/numa/numa.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/numa
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/netapp
+copying src/collectors/netapp/netapp.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/netapp
+copying src/collectors/netapp/netappDisk.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/netapp
+copying src/collectors/netapp/netapp_inode.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/netapp
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/phpfpm
+copying src/collectors/phpfpm/phpfpm.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/phpfpm
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/proc
+copying src/collectors/proc/proc.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/proc
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/vmsdoms
+copying src/collectors/vmsdoms/vmsdoms.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/vmsdoms
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/elasticsearch
+copying src/collectors/elasticsearch/elasticsearch.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/elasticsearch
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/exim
+copying src/collectors/exim/exim.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/exim
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/drbd
+copying src/collectors/drbd/drbd.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/drbd
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/entropy
+copying src/collectors/entropy/entropy.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/entropy
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/haproxy
+copying src/collectors/haproxy/haproxy.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/haproxy
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/endecadgraph
+copying src/collectors/endecadgraph/endecadgraph.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/endecadgraph
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memory_docker
+copying src/collectors/memory_docker/memory_docker.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/memory_docker
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/stats
+copying src/collectors/stats/stats.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/stats
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/interrupt
+copying src/collectors/interrupt/interrupt.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/interrupt
+copying src/collectors/interrupt/soft.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/interrupt
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/sockstat
+copying src/collectors/sockstat/sockstat.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/sockstat
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/diskusage
+copying src/collectors/diskusage/diskusage.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/diskusage
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/tcp
+copying src/collectors/tcp/tcp.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/tcp
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/udp
+copying src/collectors/udp/udp.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/udp
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/httpd
+copying src/collectors/httpd/httpd.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/httpd
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/hbase
+copying src/collectors/hbase/hbase.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/hbase
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/onewire
+copying src/collectors/onewire/onewire.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/onewire
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/kafka
+copying src/collectors/kafka/kafka.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/kafka
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/netscalersnmp
+copying src/collectors/netscalersnmp/netscalersnmp.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/netscalersnmp
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/websitemonitor
+copying src/collectors/websitemonitor/websitemonitor.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/websitemonitor
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/mysql
+copying src/collectors/mysql/mysql55.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/mysql
+copying src/collectors/mysql/mysql.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/mysql
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/celerymon
+copying src/collectors/celerymon/celerymon.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/celerymon
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/jolokia
+copying src/collectors/jolokia/jolokia.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/jolokia
+copying src/collectors/jolokia/cassandra_jolokia.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/jolokia
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/conntrack
+copying src/collectors/conntrack/conntrack.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/conntrack
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/openstackswift
+copying src/collectors/openstackswift/openstackswift.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/openstackswift
+creating /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/icinga_stats
+copying src/collectors/icinga_stats/icinga_stats.py -> /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/share/diamond/collectors/icinga_stats
+running install_egg_info
+Writing /opt/git_home/Diamond/build/diamond-3.5.33/debian/diamond/usr/lib/python2.7/site-packages/diamond-3.5.33-py2.7.egg-info
+dh_installdocs -pdiamond 
+dh_installexamples -pdiamond 
+dh_installman -pdiamond  
+dh_installinfo -pdiamond  
+dh_installmenu -pdiamond 
+dh_installcron -pdiamond 
+dh_installinit -pdiamond  
+dh_installdebconf -pdiamond 
+dh_installemacsen -pdiamond   
+dh_installcatalogs -pdiamond 
+dh_installpam -pdiamond 
+dh_installlogrotate -pdiamond 
+dh_installlogcheck -pdiamond 
+dh_installchangelogs -pdiamond  
+dh_installudev -pdiamond 
+dh_lintian -pdiamond 
+dh_bugfiles -pdiamond 
+dh_install -pdiamond  
+dh_link -pdiamond  
+dh_installmime -pdiamond 
+dh_installgsettings -pdiamond 
+dh_pysupport -pdiamond  
+dh_pysupport: This program is deprecated, you should use dh_python2 instead. Migration guide: http://deb.li/dhs2p
+dh_strip -pdiamond  
+dh_compress -pdiamond  
+dh_fixperms -pdiamond  
+dh_makeshlibs -pdiamond  
+dh_installdeb -pdiamond 
+dh_perl -pdiamond 
+dh_shlibdeps -pdiamond    
+dh_gencontrol -pdiamond  
+dpkg-gencontrol: warning: package diamond: unused substitution variable ${python:Versions}
+# only call dh_scour for packages in main
+if grep -q '^Component:[[:space:]]*main' /CurrentlyBuilding 2>/dev/null; then dh_scour -pdiamond ; fi
+dh_md5sums -pdiamond 
+dh_builddeb -pdiamond 
+dpkg-deb: building package `diamond' in `../diamond_3.5.33_all.deb'.
+ dpkg-genchanges -v3.5.33 >../diamond_3.5.33_amd64.changes
+parsechangelog/debian: warning: 'since' option specifies most recent version, ignoring
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build diamond-3.5.33
+dpkg-buildpackage: full upload; Debian-native package (full source is included)
+Now running lintian...
+warning: the authors of lintian do not recommend running it with root privileges!
+E: diamond changes: bad-distribution-in-changes-file unstable
+E: diamond changes: changed-by-address-malformed root <root@morpx-desk1>
+W: diamond source: ancient-standards-version 3.9.1 (current is 3.9.5)
+E: diamond: debian-changelog-file-contains-invalid-email-address root@morpx-desk1
+W: diamond: extra-license-file usr/share/diamond/LICENSE
+W: diamond: binary-without-manpage usr/bin/diamond
+W: diamond: binary-without-manpage usr/bin/diamond-setup
+E: diamond: wrong-path-for-interpreter usr/share/diamond/collectors/numa/numa.py (#!/usr/local/rnt/bin/python != /usr/bin/python)
+W: diamond: executable-not-elf-or-script usr/share/diamond/collectors/elasticsearch/elasticsearch.py
+W: diamond: executable-not-elf-or-script usr/share/diamond/collectors/mountstats/mountstats.py
+W: diamond: maintainer-script-empty preinst
+W: diamond: maintainer-script-needs-depends-on-adduser postinst
+Finished running lintian.

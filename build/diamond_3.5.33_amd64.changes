@@ -1,0 +1,30 @@
+Format: 1.8
+Date: Wed, 17 Dec 2014 10:52:09 +0800
+Source: diamond
+Binary: diamond
+Architecture: source all
+Version: 3.5.33
+Distribution: unstable
+Urgency: medium
+Maintainer: Rob Smith <kormoc@gmail.com>
+Changed-By: root <root@morpx-desk1>
+Description: 
+ diamond    - System statistics collector for Graphite.
+Changes: 
+ diamond (3.5.33) unstable; urgency=medium
+ .
+   * Last Commit: (2014-12-15 20:34:22 +0800)
+     ea1d26f6bb2506830a2626e3e73b1e92cbac237d Tomas Neme
+     <lacrymology@gmail.com>
+Checksums-Sha1: 
+ 5e872e57f6abc10b819191a0ad02789316258265 712 diamond_3.5.33.dsc
+ 95e1e90e4317b941b8c14c9cb19e0311652026cc 201941 diamond_3.5.33.tar.gz
+ 331cc8933071d1555e7bd122db4217c820a184d7 159328 diamond_3.5.33_all.deb
+Checksums-Sha256: 
+ 794f07aeb2e3117df8e182fd1e525d02645fac03209dc1622d04995b468f699e 712 diamond_3.5.33.dsc
+ f29974a770fbf3040a1abb794f642455a789dc94eba1f7cbb37028defa385971 201941 diamond_3.5.33.tar.gz
+ db0d2e07e33ade5fb6cbcb3b6a99ee48f561b97fb778effff0f9748d1bf8727f 159328 diamond_3.5.33_all.deb
+Files: 
+ c6a2db529abe88d860ef7e18eb2d79a2 712 misc extra diamond_3.5.33.dsc
+ d107cfff8b457e35e2f63c7d237b8f9e 201941 misc extra diamond_3.5.33.tar.gz
+ 244ca031278ef940cc713092f1239c15 159328 misc extra diamond_3.5.33_all.deb
